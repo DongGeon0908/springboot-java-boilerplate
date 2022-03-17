@@ -1,0 +1,42 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/boilerplate?characterEncoding=UTF-8&serverTimezone=Asia/Seoul&allowMultiQueries=true&autoReconnection=true&characterEncoding=UTF-8
+    username: root
+    password:
+
+cors:
+  allowed-origins: "*"
+  allowed-methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+  allowed-headers: "*"
+  max-age: 3600
+  apply-url-range: "/**"
+
+swagger:
+  project-name: Springboot Java Boilerplate
+  github-url: https://github.com/DongGeon0908/springboot-java-boilerplate
+  developer-email: wrjssmjdhappy@gmail.com
+  api-title: Springboot Java Boilerplate API
+  api-description: Management REST API SERVICE
+  api-verion: 1.0
+  terms-of-service-url: urn:tos
+  license: Apache 2.0
+  license-url: http://www.apache.org/licenses/LICENSE-2.0
+  type-json: application/json
+  type-xml: application/xml
+  api-name: SELAB REST API WITH JWT
+  api-key-name: Authorization
+  api-pass-as: header
+  authorization-scope: global
+  autorization-description: accessEverything
+  white-list: /v2/api-docs,/swagger-resources,/swagger-resources/**,/configuration/ui,/configuration/security,/swagger-ui.html,/webjars/**,/v3/api-docs/**,/swagger-ui/**,/swagger
